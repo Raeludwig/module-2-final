@@ -1,0 +1,138 @@
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+    --main-border: solid 2px #B3DEC1;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Geneva, Tahoma, sans-serif, 'Arial Narrow', Arial, sans-serif;
+    background-color: #E5FCF5;
+    color:#210124;
+    font-weight: 800;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.3fr 1fr 1fr 1fr;
+    grid-template-rows:  0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "about-me main main main"
+        "work content1 content2 content3"
+        "contact footer footer footer";
+    grid-gap: 0.2rem;
+}
+
+
+h1{
+    align-items: center;
+    justify-content: left;
+    font-size: 50px;
+    cursor: default;
+}
+
+.profile{
+    height:150px;
+    border-radius: 5px;
+    border: var(--main-border);
+    margin:15px;
+}
+
+nav {
+    grid-area: nav;
+    border: var(--main-border);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:8px;
+    background-color: #210124;
+    color:white;
+    border-radius: 5px;
+}
+
+#navigation-link{
+    cursor: pointer;
+}
+
+
+#sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-right: solid 5px #210124; 
+}
+
+.about-me {
+    grid-area: sidebar;
+    border: var(--main-border);
+}
+
+.work {
+    grid-area: sidebar;
+}
+
+
+.contact {
+    grid-area: sidebar;
+    border: var(--main-border);
+}
+
+
+main {
+    grid-area: main;
+    border: var(--main-border);
+}
+
+#content1 {
+    grid-area: content1;
+    border: var(--main-border);
+}
+
+
+
+#content2 {
+    grid-area: content2;
+    border: var(--main-border);
+}
+
+#content3 {
+    grid-area: content3;
+    border: var(--main-border);
+}
+
+.sparkles, .techie, .waves{
+    width:300px;
+    height:150px;
+    object-fit:fill;
+}
+
+
+h6{
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows:  0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+            "nav"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+            "footer";
+    }
+}
+
