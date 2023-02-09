@@ -103,7 +103,7 @@ main {
     border: var(--main-border);
 }
 
-.sparkles, .techie, .waves{
+.sparkles, .techie, .job-search{
     width:100%;
     height:100%;
     object-fit:fill;
